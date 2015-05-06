@@ -1,10 +1,17 @@
 <?php
 
-function detect_mobile_init() {
-  $GLOBALS['is_mobile'] = _detect_mobile();
+/**
+ * Implements hook_init()
+ */
+function MYMODULE_init() {
+  $GLOBALS['is_mobile'] = _MYMODULE();
 }
 
-function _detect_mobile() {
+/**
+ * Helper function to detect mobile user agents
+ * @return boolean - TRUE if user agent is mobile, FALSE if not
+ */
+function _MYMODULE() {
   // if no user agent is set
   if (!isset($_SERVER['HTTP_USER_AGENT']))
     $is_mobile = FALSE;
