@@ -1,0 +1,4 @@
+name = Detect Mobile
+description = This module sets a global variable $GLOBASL['is_mobile'] TRUE or FALSE if the detected user agent is mobile or not
+package = Custom
+core = 7.x
